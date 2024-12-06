@@ -1,21 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header>
-      <h1>Welcome to My Website!</h1>
-    </header>
-    <main>
-      <p>This is a simple website hosted on GitHub Pages.</p>
-    </main>
-    <footer>
-      <p>Created with love by Me</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
-</html>
+/* Global Styles */
+body {
+    font-family: 'Courier New', monospace;  /* Monospaced, retro font */
+    background-color: #000000;  /* Dark background to resemble TempleOS */
+    color: #00FF00;  /* Neon green text */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #000000;  /* Dark background for header */
+    color: #00FF00;  /* Neon green for text */
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #00FF00;  /* Green border for header */
+}
+
+header h1 {
+    font-size: 48px;  /* Large header text */
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #00FF00;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #0000FF;  /* Blue background on hover */
+    color: #FF00FF;  /* Pink hover text */
+}
+
+/* Section Styling */
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+h2 {
+    color: #00FF00;
+    font-size: 36px;
+}
+
+p {
+    font-size: 20px;
+}
+
+/* Portfolio Gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.artwork {
+    width: 30%;  /* Each artwork takes 30% of the row */
+    margin-bottom: 20px;
+    text-align: center;
+    border: 2px solid #00FF00;  /* Green border around each artwork */
+    padding: 10px;
+}
+
+.artwork img {
+    width: 100%;  /* Image takes up full container width */
+    height: auto;  /* Maintain aspect ratio */
+    border: 2px solid #00FF00;  /* Green border around the image */
+    margin-bottom: 10px;
+}
+
+.artwork p {
+    color: #00FF00;  /* Green text for image descriptions */
+    font-size: 18px;
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    color: #00FF00;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
