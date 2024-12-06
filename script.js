@@ -1,11 +1,4 @@
-// Smooth Scroll functionality for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();  // Prevent default anchor behavior
+// script.js - JavaScript (if needed in the future)
 
-        // Scroll to the section smoothly
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+// Example of simple functionality:
+// console.log('JavaScript is working!');

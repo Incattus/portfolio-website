@@ -1,11 +1,176 @@
-// Smooth Scroll functionality for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();  // Prevent default anchor behavior
+/* Resetting default styles for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        // Scroll to the section smoothly
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+body {
+    font-family: 'Inter', sans-serif; /* Font family for modern and clean typography */
+    background-color: #F9F9F9; /* Light background color */
+    color: #333; /* Text color */
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+}
+
+/* Header Styles */
+header {
+    background-color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow to separate header */
+}
+
+header h1 {
+    font-size: 48px;
+    color: #222;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center the navigation links */
+    margin-top: 10px;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px; /* Spacing between links */
+}
+
+nav ul li a {
+    color: #555; /* Default link color */
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #007BFF; /* Blue color on hover */
+    border-bottom: 2px solid #007BFF; /* Underline effect */
+}
+
+/* Section Styling */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 36px;
+    color: #222;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto; /* Centers the text */
+}
+
+/* Portfolio Gallery Styles */
+.gallery {
+    display: flex;
+    justify-content: center; /* Centering all artwork items */
+    flex-wrap: wrap; /* Allow multiple rows on smaller screens */
+    gap: 20px; /* Spacing between images */
+    padding: 40px 20px;
+}
+
+.artwork {
+    width: 280px; /* Fixed width for each artwork */
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    padding: 20px;
+    transition: transform 0.3s ease; /* Smooth transformation for hover effect */
+}
+
+.artwork img {
+    width: 100%; /* Make image responsive */
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.artwork-title {
+    font-size: 22px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.artwork-description {
+    font-size: 16px;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* Hover Effect on Artwork */
+.artwork:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+}
+
+/* Contact Section Styles */
+ul {
+    list-style: none;
+    text-align: center;
+    margin-top: 30px;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+ul li a {
+    color: #007BFF; /* Blue color for links */
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #fff;
+    color: #666;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .gallery {
+        justify-content: center;
+    }
+
+    .artwork {
+        width: 100%; /* Make artwork take full width on small screens */
+        max-width: 350px; /* Limit max width for better layout */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack the navigation links */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Vertical spacing for nav links */
+    }
+}
